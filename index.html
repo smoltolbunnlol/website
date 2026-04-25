@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Interactive Tulip Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+
+    <!-- Screen 1: Landing Page -->
+    <section id="screen-1" class="screen active">
+        <div class="landing-container">
+            <div class="bow-top-left">🎀</div>
+            <div class="bow-top-right">🎀</div>
+            <div class="lily-circle-wrapper" onclick="nextScreen(2)">
+                <img src="assets/download.jpg?v=2" alt="Lilies" class="lily-circle">
+            </div>
+            <div class="bow-bottom-right">🎀</div>
+            <p class="click-me-text">Click me</p>
+        </div>
+    </section>
+
+    <!-- Screen 2: 10 Things About Griva -->
+    <section id="screen-2" class="screen">
+        <div class="things-container">
+            <div class="decoration lily-top"><img src="assets/download.jpg?v=2" style="width:100px; border-radius:50%;"></div>
+            <h1 class="things-title">10 Things About Griva <span class="bow-title">🎀</span></h1>
+            
+            <div class="accordion">
+                <!-- Items injected by JS -->
+            </div>
+            <div class="decoration lily-bottom"><img src="assets/download.jpg?v=2" style="width:100px; border-radius:50%;"></div>
+            <div class="next-button-container">
+                <button class="next-btn" onclick="nextScreen(3)">Next 🌸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 3: Anime Characters -->
+    <section id="screen-3" class="screen">
+        <div class="anime-container">
+            <div class="border-box">
+                <div class="decoration lily-top-left"><img src="assets/download.jpg?v=2" style="width:80px; border-radius:50%;"></div>
+                
+                <h2 class="anime-title">Griva as anime characters<br>because avi is obsessed with anime</h2>
+                
+                <div class="anime-comparison">
+                    <div class="photo-card real-photo">
+                        <span class="label" style="background:#e8b5c9;">GRIVA'S PHOTO</span>
+                        <img src="assets/e97a6eae-d896-4a65-bb88-4d349e004980.jpg?v=2" alt="Griva">
+                    </div>
+                    <div class="photo-card anime-photo">
+                        <span class="label" style="background:#d4e1bc;">CARTOON MATCH</span>
+                        <img src="assets/48172974-27e6-493d-8cd3-51cb213878bf.jpg?v=2" alt="Anime Character">
+                    </div>
+                </div>
+                <div class="anime-text-box">If nana was a aesthetic id it would be griva</div>
+
+                <div class="anime-comparison">
+                    <div class="photo-card real-photo">
+                        <span class="label" style="background:#e8b5c9;">GRIVA'S PHOTO</span>
+                        <img src="assets/bcba0bd0-8657-43ce-9458-895ef2bce7b3.jpg?v=2" alt="Griva">
+                    </div>
+                    <div class="photo-card anime-photo">
+                        <span class="label" style="background:#d4e1bc;">CARTOON MATCH</span>
+                        <img src="assets/images.webp?v=2" alt="Anime Character">
+                    </div>
+                </div>
+                <div class="anime-text-box">I love espeon very much and love griva very much so 🥺</div>
+
+                <div class="next-button-container" style="margin-top: 2rem;">
+                    <button class="next-btn" onclick="nextScreen(4)">Next 🌸</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 4: Memories Part 1 -->
+    <section id="screen-4" class="screen bow-bg">
+        <div class="memories-container">
+            <div class="polaroid-grid">
+                <div class="polaroid p1">
+                    <div class="tape"></div>
+                    <img src="assets/6d8e1578-196f-421c-b3aa-57470d820c47.jpg?v=2" alt="Memory">
+                </div>
+                <div class="polaroid p2">
+                    <div class="tape"></div>
+                    <img src="assets/66d00126-39e7-4415-9661-7cc39c9dafbb.jpg?v=2" alt="Memory">
+                </div>
+                <div class="polaroid p3">
+                    <div class="tape"></div>
+                    <img src="assets/6439828c-9cff-4fc6-ba12-3a1c73cf3b90.jpg?v=6" alt="Memory">
+                </div>
+                <div class="polaroid p4">
+                    <div class="tape"></div>
+                    <img src="assets/10864adb-59d6-4178-bc7a-4854f9c654b2.jpg?v=2" alt="Memory">
+                </div>
+            </div>
+            
+            <div class="green-strip"></div>
+            
+            <div class="next-button-container" style="margin-top: 2rem; position: relative; z-index: 10;">
+                <button class="next-btn" onclick="nextScreen('4b')">Next 🌸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 4b: Memories Part 2 -->
+    <section id="screen-4b" class="screen bow-bg">
+        <div class="memories-container">
+            <div class="polaroid-grid">
+                <div class="polaroid p1">
+                    <div class="tape"></div>
+                    <img src="assets/c0cb6ff8-8c2d-4023-8dbd-623661d46283.jpg?v=6" alt="Memory">
+                </div>
+                <div class="polaroid p2">
+                    <div class="tape"></div>
+                    <img src="assets/82bbeb64-42b3-4549-8f5b-ade225622af0.jpg?v=2" alt="Memory">
+                </div>
+                <div class="polaroid p3">
+                    <div class="tape"></div>
+                    <img src="assets/7c2bd5fe-bf89-476a-b7e1-f5cc61c68178.jpg?v=4" alt="Memory">
+                </div>
+                <div class="polaroid p4">
+                    <div class="tape"></div>
+                    <img src="assets/8421b3d8-b81d-4575-ad95-8fcb8c9e53cd.jpg?v=2" alt="Memory">
+                </div>
+            </div>
+            
+            <div class="green-strip"></div>
+            
+            <div class="next-button-container" style="margin-top: 2rem; position: relative; z-index: 10;">
+                <button class="next-btn" onclick="nextScreen(5)">Next 🌸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 5: Photobooth -->
+    <section id="screen-5" class="screen bow-bg-light">
+        <div class="photobooth-container">
+            <div class="decoration lily-top-left-large">
+                <img src="assets/download.jpg?v=2" style="width:150px; border-radius:10px;" alt="Lily">
+            </div>
+            
+            <div class="purple-box">
+                ok, but when the<br>fuck are you going to<br>the photobooth :(
+            </div>
+            
+            <div class="decoration lily-bottom-right-large">
+                <img src="assets/download.jpg?v=2" style="width:150px; border-radius:10px;" alt="Lily">
+            </div>
+
+            <div class="next-button-container" style="margin-top: 4rem;">
+                <button class="next-btn" onclick="nextScreen(6)">Next 🌸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 6: Birthday Letter -->
+    <section id="screen-6" class="screen">
+        <div class="letter-container">
+            <div class="letter-box">
+                <div class="decoration" style="top: -20px; left: -20px; font-size: 2.5rem; z-index: 5;">🎀</div>
+                <div class="decoration" style="top: -40px; right: -40px; z-index: 5;"><img src="assets/download.jpg?v=2" style="width:80px; border-radius:50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" alt="Lily"></div>
+                <p>hi, i have so much to say and so much to tell keeping in mind that we've been friends from a long time. I know you're not the best expressor and so I'll try to express myself as much especially because its your birthday 🥺</p>
+                <p>this was the reason why I asked you if it was ok to be corny and shi but yes, no idea where all the time flew by and no idea how we got this close but i'm really really glad that we did. I remember staying up at night listening to songs on discord and falling asleep and how we used to make fun of each other's pictures. Drinking for the first time at kushal's house or that one navratri night.</p>
+                <p>I'm genuinely so glad that we get to figure this university and life bs together. No idea how we became more than just friends and again I'm really glad that we did. Whatever we are or whatever we'll be, i'll always see you as my best friend :(</p>
+                <p>and i really hope that you can come to me wherever you're just not feeling it. I hope you have a great birthday and that you shear up the will to celebrate it and be happy. Everything's gonna be alright, trust me it will.</p>
+                <h3 class="letter-signature">I love you very much griva gundi 🫶🏻</h3>
+                <div class="decoration" style="bottom: -40px; left: -40px; z-index: 5;"><img src="assets/download.jpg?v=2" style="width:80px; border-radius:50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" alt="Lily"></div>
+                <div class="decoration" style="bottom: -20px; right: -20px; font-size: 2.5rem; z-index: 5;">🎀</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js?v=2"></script>
+</body>
+</html>
